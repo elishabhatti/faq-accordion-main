@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | FAQ accordion</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+     <!-- css starts from here -->
+     <style>
+       * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        transition: all 0.15s;
+        font-family: "Work Sans";
+      }
+      body {
+        background-image: url(./assets/images/background-pattern-desktop.svg);
+        background-repeat: no-repeat;
+        background-color: #F9EEFF;
+        background-size: cover;
+        margin: 20px;
+        position: relative;
+      }
+      .question {
+        color: hsl(292, 42%, 14%);
+      }
+      .question:hover {
+        cursor: pointer;
+        color: #ac28eb;
+      }
+      p {
+        margin: 15px 9px;
+        font-size: 16px;
+
+      }
+      .answer {
+        color: hsl(292, 16%, 49%);
+      }
+      .main-container {
+        background-color: hsl(275, 100%, 97%);
+        background-color: white;
+        width: 550px;
+        padding: 25px;
+        top: 150px;
+        box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+        border-radius: 10px;
+        position: absolute;
+        margin: 20px;
+      }
+      .head-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .head {
+        display: flex;
+        margin: 20px 0;
+        align-items: center;
+      }
+      h1 {
+        font-size: 45px;
+        margin: 0 10px;
+      }
+      .none {
+        display: none;
+      }
+      .show {
+        display: block;
+      }
+      #btnPlus1,
+      #btnPlus2,
+      #btnPlus3,
+      #btnPlus4,
+      #btnMinus1,
+      #btnMinus2,
+      #btnMinus3,
+      #btnMinus4 {
+        cursor: pointer;
+      }
+      .question {
+        align-items: center;
+        justify-content: space-between;
+        display: flex;
+      }
+      @media (max-width: 600px) {
+        body {
+          background-image: url(./assets/images/background-pattern-mobile.svg);
+        }
+        .main-container {
+          width: 100%;
+          top: 80px;
+          padding: 20px;
+        }
+        p {
+          font-size: 14px;
+          margin: 10px;
+        }
+        h1 {
+          font-size: 40px;
+        }
+      }
+    </style>
+  <!-- css ends from here -->
+</head>
+<body>
+    <!-- html start from here -->
+    <div class="head-container">
+      <div class="main-container card">
+        <div class="head">
+          <div class="img">
+            <img src="./assets/images/icon-star.svg" alt="" />
+          </div>
+          <div class="heading">
+            <h1>FAQs</h1>
+          </div>
+        </div>
+        <!-- question 1 -->
+        <div class="question">
+          <p><b>What is Frontend Mentor, and how will it help me?</b></p>
+          <img
+          id="btnMinus1"
+            class="show"
+            src="./assets/images/icon-minus.svg"
+            alt=""
+          />
+          <img
+          id="btnPlus1"
+          class="none"
+          src="./assets/images/icon-plus.svg"
+          alt=""
+          />
+        </div>
+        <!-- answer 1 -->
+        <div id="answer1" class="answer show">
+          <p>
+            Frontend Mentor offers realistic coding challenges to help
+            developers improve their frontend coding skills with projects in
+            HTML, CSS, and JavaScript. It's suitable for all levels and ideal
+            for portfolio building.
+          </p>
+        </div>
+        <!-- question 2 -->
+        <div class="question">
+          <p><b>Is Frontend Mentor free?</b></p>
+          <img
+            id="btnMinus2"
+            class="none"
+            src="./assets/images/icon-minus.svg"
+            alt=""
+            />
+          <img
+            id="btnPlus2"
+            class="show"
+            src="./assets/images/icon-plus.svg"
+            alt=""
+          />
+        </div>
+        <!-- answer 2 -->
+        <div id="answer2" class="answer none">
+          <p>
+            Yes, Frontend Mentor offers both free and premium coding challenges,
+            with the free option providing access to a range of projects
+            suitable for all skill levels.
+          </p>
+        </div>
+        <!-- question 3 -->
+        <div class="question">
+          <p><b>Can I use Frontend Mentor projects in my portfolio?</b></p>
+          <img
+          id="btnMinus3"
+          class="none"
+          src="./assets/images/icon-minus.svg"
+            alt=""
+          />
+          <img
+            id="btnPlus3"
+            class="show"
+            src="./assets/images/icon-plus.svg"
+            alt=""
+          />
+        </div>
+        <!-- answer 3 -->
+        <div id="answer3" class="answer none">
+          <p>
+            Yes, you can use projects completed on Frontend Mentor in your
+            portfolio. It's an excellent way to showcase your skills to
+            potential employers!
+          </p>
+        </div>
+        <!-- question 4 -->
+        <div class="question">
+          <p>
+            <b
+            >How can I get help if I'm stuck on a Frontend Mentor
+            challenge?</b
+            >
+          </p>
+          <img
+            id="btnMinus4"
+            class="none"
+            src="./assets/images/icon-minus.svg"
+            alt=""
+            />
+            <img
+            id="btnPlus4"
+            class="show"
+            src="./assets/images/icon-plus.svg"
+            alt=""
+          />
+        </div>
+        <!-- answer 4 -->
+        <div id="answer4" class="answer none">
+          <p>
+            The best place to get help is inside Frontend Mentor's Discord
+            community. There's a help channel where you can ask questions and
+            seek support from other community members.
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- html ends from here -->
+    <!-- js start from here -->
+    <script>
+
+      const btnMinus1 = document.getElementById("btnMinus1");
+      const btnMinus2 = document.getElementById("btnMinus2");
+      const btnMinus3 = document.getElementById("btnMinus3");
+      const btnMinus4 = document.getElementById("btnMinus4");
+
+      const btnPlus1 = document.getElementById("btnPlus1");
+      const btnPlus2 = document.getElementById("btnPlus2");
+      const btnPlus3 = document.getElementById("btnPlus3");
+      const btnPlus4 = document.getElementById("btnPlus4");
+
+      const answer1 = document.getElementById("answer1");
+      const answer2 = document.getElementById("answer2");
+      const answer3 = document.getElementById("answer3");
+      const answer4 = document.getElementById("answer4");
+
+      btnPlus1.addEventListener("click", () => {
+        answer1.classList.toggle("none");
+        answer1.classList.toggle("show");
+        btnMinus1.classList.remove("none");
+        btnMinus1.classList.add("show");
+        btnPlus1.classList.remove("show");
+        btnPlus1.classList.add("none");
+      });
+      btnMinus1.addEventListener("click", () => {
+        answer1.classList.toggle("none");
+        answer1.classList.toggle("show");
+        btnMinus1.classList.add("none");
+        btnMinus1.classList.remove("show");
+        btnPlus1.classList.add("show");
+        btnPlus1.classList.remove("none");
+      });
+      btnPlus2.addEventListener("click", () => {
+        answer2.classList.toggle("none");
+        btnMinus2.classList.remove("none");
+        btnMinus2.classList.add("show");
+        btnPlus2.classList.remove("show");
+        btnPlus2.classList.add("none");
+      });
+      btnMinus2.addEventListener("click", () => {
+        answer2.classList.toggle("none");
+        btnMinus2.classList.add("none");
+        btnMinus2.classList.remove("show");
+        btnPlus2.classList.add("show");
+        btnPlus2.classList.remove("none");
+      });
+      btnPlus3.addEventListener("click", () => {
+        answer3.classList.toggle("none");
+        btnMinus3.classList.remove("none");
+        btnMinus3.classList.add("show");
+        btnPlus3.classList.remove("show");
+        btnPlus3.classList.add("none");
+      });
+      btnMinus3.addEventListener("click", () => {
+        answer3.classList.toggle("none");
+        btnMinus3.classList.add("none");
+        btnMinus3.classList.remove("show");
+        btnPlus3.classList.add("show");
+        btnPlus3.classList.remove("none");
+      });
+      btnPlus4.addEventListener("click", () => {
+        answer4.classList.toggle("none");
+        btnMinus4.classList.remove("none");
+        btnMinus4.classList.add("show");
+        btnPlus4.classList.remove("show");
+        btnPlus4.classList.add("none");
+      });
+      btnMinus4.addEventListener("click", () => {
+        answer4.classList.toggle("none");
+        btnMinus4.classList.add("none");
+        btnMinus4.classList.remove("show");
+        btnPlus4.classList.add("show");
+        btnPlus4.classList.remove("none");
+      });
+    </script>
+  <!-- js ends from here -->
+  </body>
+</html>
